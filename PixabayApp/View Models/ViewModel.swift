@@ -10,30 +10,30 @@ import UIKit.UIImage
 
 class MovieViewModel {
     // MARK: - Properties
-    private var movieArray = [MovieCodable]()
+    private var picturesArray = [ImageHits]()
     weak var movieViewController: ViewController?
 
     // MARK: - Methods
-    func getMovie(callback: @escaping ([MovieCodable]) -> Void) {
+    func getImage(callback: @escaping ([ImageCodable]) -> Void) {
         guard let url = URL(string: "\(Constants.shareInstance.getBaseAPI())\(Constants.shareInstance.getAPIKey())\(Constants.shareInstance.getAPIParams())") else {
             return
         }
         
-        ApiService.shareInstance.getAllMovies(url: url) { response in
-            if let movies = response.results {
-                self.movieArray.append(contentsOf: movies)
+        ApiService.shareInstance.getAllImages(url: url) { response in
+            if let images = response.results {
+                self.picturesArray.append(contentsOf: movies)
             }
-            callback(self.movieArray)
+            callback(self.imageArray)
         } faliure: { errorMessage in
             print(errorMessage)
         }
     }
 
     func getCount() -> Int {
-        return movieArray.count
+        return picturesArray.count
     }
     
-    func movieAt(index: Int) -> MovieCodable {
-        return movieArray[index]
+    func movieAt(index: Int) -> ImageHits {
+        return picturesArray[index]
     }
 }

@@ -122,21 +122,13 @@
 			isa = PBXGroup;
 			children = (
 				290F6ED327D7BC440091B91D /* AppDelegate.swift */,
+				290F6F1E27D7C8CC0091B91D /* Utilities */,
+				290F6F1C27D7C8AA0091B91D /* View Models */,
 				290F6ED527D7BC440091B91D /* SceneDelegate.swift */,
-				290F6ED727D7BC440091B91D /* ViewController.swift */,
-				290F6ED927D7BC440091B91D /* Main.storyboard */,
+				290F6F1B27D7C8900091B91D /* Views */,
 				290F6EDC27D7BC460091B91D /* Assets.xcassets */,
-				290F6EDE27D7BC460091B91D /* LaunchScreen.storyboard */,
+				290F6F1F27D7C8F60091B91D /* Model */,
 				290F6EE127D7BC460091B91D /* Info.plist */,
-				290F6F0327D7C1DB0091B91D /* ImageDetailsViewController.swift */,
-				290F6F0427D7C1DB0091B91D /* ImageDetailsViewController.xib */,
-				290F6F0727D7C2110091B91D /* ViewModel.swift */,
-				290F6F0927D7C25A0091B91D /* ImageCollectionViewCell.swift */,
-				290F6F0A27D7C25A0091B91D /* ImageCollectionViewCell.xib */,
-				290F6F0D27D7C2900091B91D /* Constants.swift */,
-				290F6F0F27D7C2A00091B91D /* ApiServiceClient.swift */,
-				290F6F1127D7C2DF0091B91D /* ImageModel.swift */,
-				290F6F1327D7C33A0091B91D /* PictureLayout.swift */,
 			);
 			path = PixabayApp;
 			sourceTree = "<group>";
@@ -156,6 +148,46 @@
 				290F6EF627D7BC460091B91D /* PixabayAppUITestsLaunchTests.swift */,
 			);
 			path = PixabayAppUITests;
+			sourceTree = "<group>";
+		};
+		290F6F1B27D7C8900091B91D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				290F6ED727D7BC440091B91D /* ViewController.swift */,
+				290F6ED927D7BC440091B91D /* Main.storyboard */,
+				290F6EDE27D7BC460091B91D /* LaunchScreen.storyboard */,
+				290F6F0327D7C1DB0091B91D /* ImageDetailsViewController.swift */,
+				290F6F0427D7C1DB0091B91D /* ImageDetailsViewController.xib */,
+				290F6F0927D7C25A0091B91D /* ImageCollectionViewCell.swift */,
+				290F6F0A27D7C25A0091B91D /* ImageCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		290F6F1C27D7C8AA0091B91D /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				290F6F0727D7C2110091B91D /* ViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		290F6F1E27D7C8CC0091B91D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				290F6F1327D7C33A0091B91D /* PictureLayout.swift */,
+				290F6F0D27D7C2900091B91D /* Constants.swift */,
+				290F6F0F27D7C2A00091B91D /* ApiServiceClient.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		290F6F1F27D7C8F60091B91D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				290F6F1127D7C2DF0091B91D /* ImageModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
