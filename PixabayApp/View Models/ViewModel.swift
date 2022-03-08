@@ -8,22 +8,22 @@
 import Alamofire
 import UIKit.UIImage
 
-class MovieViewModel {
+class ViewModel {
     // MARK: - Properties
     private var picturesArray = [ImageHits]()
     weak var movieViewController: ViewController?
 
     // MARK: - Methods
-    func getImage(callback: @escaping ([ImageCodable]) -> Void) {
+    func getImage(callback: @escaping ([ImageHits]) -> Void) {
         guard let url = URL(string: "\(Constants.shareInstance.getBaseAPI())\(Constants.shareInstance.getAPIKey())\(Constants.shareInstance.getAPIParams())") else {
             return
         }
         
         ApiService.shareInstance.getAllImages(url: url) { response in
             if let images = response.results {
-                self.picturesArray.append(contentsOf: movies)
+                self.picturesArray.append(contentsOf: images)
             }
-            callback(self.imageArray)
+            callback(self.picturesArray)
         } faliure: { errorMessage in
             print(errorMessage)
         }

@@ -12,7 +12,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     @IBOutlet var movieView: UICollectionView!
     
-    var movieViewModel = MovieViewModel()
+    var imageViewModel = ViewModel()
     
     private let sectionInsets = UIEdgeInsets(
         top: 20.0,
@@ -28,7 +28,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
                                  bundle: nil),
                            forCellWithReuseIdentifier: Constants.shareInstance.getCellName())
 
-        movieViewModel.getMovie { _ in
+        imageViewModel.getMovie { _ in
             DispatchQueue.main.async {
                 self.movieView.reloadData()
             }
@@ -44,7 +44,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return movieViewModel.getCount()
+        return imageViewModel.getCount()
     }
 
     // 3
@@ -54,12 +54,12 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     ) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: Constants.shareInstance.getCellName(),
-            for: indexPath) as? MovieCell else {
+            for: indexPath) as? ImageCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.backgroundColor = .black
-        if indexPath.row <= movieViewModel.getCount() {
-            let modelMovie = movieViewModel.movieAt(index: indexPath.row)
+        if indexPath.row <= imageViewModel.getCount() {
+            let modelMovie = imageViewModel.movieAt(index: indexPath.row)
             cell.movieTitle.text = modelMovie.title
             let imageURL = URL(string: "\(Constants.shareInstance.getBaseImageUrl())" + (modelMovie.poster_path ?? ""))
             cell.movieImage.sd_setImage(with: imageURL)
@@ -103,12 +103,12 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let destinationController = storyboard.instantiateViewController(withIdentifier: "moviedetail") as? MovieDetailsViewController else {
+        guard let destinationController = storyboard.instantiateViewController(withIdentifier: "imagedetail") as? ImageDetailsViewController else {
             return
         }
 
-        if indexPath.row <= movieViewModel.getCount() {
-            let movieModel = movieViewModel.movieAt(index: indexPath.row)
+        if indexPath.row <= imageViewModel.getCount() {
+            let movieModel = imageViewModel.movieAt(index: indexPath.row)
             destinationController.movieModel = movieModel
             navigationController?.show(destinationController, sender: self)
         }
