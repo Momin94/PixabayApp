@@ -16,6 +16,17 @@
 		290F6EEB27D7BC460091B91D /* PixabayAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6EEA27D7BC460091B91D /* PixabayAppTests.swift */; };
 		290F6EF527D7BC460091B91D /* PixabayAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6EF427D7BC460091B91D /* PixabayAppUITests.swift */; };
 		290F6EF727D7BC460091B91D /* PixabayAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6EF627D7BC460091B91D /* PixabayAppUITestsLaunchTests.swift */; };
+		290F6F0527D7C1DB0091B91D /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6F0327D7C1DB0091B91D /* ImageDetailsViewController.swift */; };
+		290F6F0627D7C1DB0091B91D /* ImageDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290F6F0427D7C1DB0091B91D /* ImageDetailsViewController.xib */; };
+		290F6F0827D7C2110091B91D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6F0727D7C2110091B91D /* ViewModel.swift */; };
+		290F6F0B27D7C25A0091B91D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6F0927D7C25A0091B91D /* ImageCollectionViewCell.swift */; };
+		290F6F0C27D7C25A0091B91D /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290F6F0A27D7C25A0091B91D /* ImageCollectionViewCell.xib */; };
+		290F6F0E27D7C2900091B91D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6F0D27D7C2900091B91D /* Constants.swift */; };
+		290F6F1027D7C2A00091B91D /* ApiServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6F0F27D7C2A00091B91D /* ApiServiceClient.swift */; };
+		290F6F1227D7C2DF0091B91D /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6F1127D7C2DF0091B91D /* ImageModel.swift */; };
+		290F6F1427D7C33A0091B91D /* PictureLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6F1327D7C33A0091B91D /* PictureLayout.swift */; };
+		290F6F1727D7C45E0091B91D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 290F6F1627D7C45E0091B91D /* Alamofire */; };
+		290F6F1A27D7C4BA0091B91D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 290F6F1927D7C4BA0091B91D /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,15 @@
 		290F6EF027D7BC460091B91D /* PixabayAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixabayAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		290F6EF427D7BC460091B91D /* PixabayAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayAppUITests.swift; sourceTree = "<group>"; };
 		290F6EF627D7BC460091B91D /* PixabayAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		290F6F0327D7C1DB0091B91D /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
+		290F6F0427D7C1DB0091B91D /* ImageDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailsViewController.xib; sourceTree = "<group>"; };
+		290F6F0727D7C2110091B91D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		290F6F0927D7C25A0091B91D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		290F6F0A27D7C25A0091B91D /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		290F6F0D27D7C2900091B91D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		290F6F0F27D7C2A00091B91D /* ApiServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceClient.swift; sourceTree = "<group>"; };
+		290F6F1127D7C2DF0091B91D /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		290F6F1327D7C33A0091B91D /* PictureLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290F6F1A27D7C4BA0091B91D /* SDWebImage in Frameworks */,
+				290F6F1727D7C45E0091B91D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +128,15 @@
 				290F6EDC27D7BC460091B91D /* Assets.xcassets */,
 				290F6EDE27D7BC460091B91D /* LaunchScreen.storyboard */,
 				290F6EE127D7BC460091B91D /* Info.plist */,
+				290F6F0327D7C1DB0091B91D /* ImageDetailsViewController.swift */,
+				290F6F0427D7C1DB0091B91D /* ImageDetailsViewController.xib */,
+				290F6F0727D7C2110091B91D /* ViewModel.swift */,
+				290F6F0927D7C25A0091B91D /* ImageCollectionViewCell.swift */,
+				290F6F0A27D7C25A0091B91D /* ImageCollectionViewCell.xib */,
+				290F6F0D27D7C2900091B91D /* Constants.swift */,
+				290F6F0F27D7C2A00091B91D /* ApiServiceClient.swift */,
+				290F6F1127D7C2DF0091B91D /* ImageModel.swift */,
+				290F6F1327D7C33A0091B91D /* PictureLayout.swift */,
 			);
 			path = PixabayApp;
 			sourceTree = "<group>";
@@ -143,6 +174,10 @@
 			dependencies = (
 			);
 			name = PixabayApp;
+			packageProductDependencies = (
+				290F6F1627D7C45E0091B91D /* Alamofire */,
+				290F6F1927D7C4BA0091B91D /* SDWebImage */,
+			);
 			productName = PixabayApp;
 			productReference = 290F6ED027D7BC440091B91D /* PixabayApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +250,10 @@
 				Base,
 			);
 			mainGroup = 290F6EC727D7BC440091B91D;
+			packageReferences = (
+				290F6F1527D7C45E0091B91D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				290F6F1827D7C4BA0091B91D /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 290F6ED127D7BC440091B91D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +273,8 @@
 				290F6EE027D7BC460091B91D /* LaunchScreen.storyboard in Resources */,
 				290F6EDD27D7BC460091B91D /* Assets.xcassets in Resources */,
 				290F6EDB27D7BC440091B91D /* Main.storyboard in Resources */,
+				290F6F0627D7C1DB0091B91D /* ImageDetailsViewController.xib in Resources */,
+				290F6F0C27D7C25A0091B91D /* ImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +299,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290F6F0B27D7C25A0091B91D /* ImageCollectionViewCell.swift in Sources */,
+				290F6F0827D7C2110091B91D /* ViewModel.swift in Sources */,
 				290F6ED827D7BC440091B91D /* ViewController.swift in Sources */,
+				290F6F1027D7C2A00091B91D /* ApiServiceClient.swift in Sources */,
+				290F6F1427D7C33A0091B91D /* PictureLayout.swift in Sources */,
+				290F6F1227D7C2DF0091B91D /* ImageModel.swift in Sources */,
 				290F6ED427D7BC440091B91D /* AppDelegate.swift in Sources */,
+				290F6F0E27D7C2900091B91D /* Constants.swift in Sources */,
+				290F6F0527D7C1DB0091B91D /* ImageDetailsViewController.swift in Sources */,
 				290F6ED627D7BC440091B91D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +646,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		290F6F1527D7C45E0091B91D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		290F6F1827D7C4BA0091B91D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		290F6F1627D7C45E0091B91D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 290F6F1527D7C45E0091B91D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		290F6F1927D7C4BA0091B91D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 290F6F1827D7C4BA0091B91D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 290F6EC827D7BC440091B91D /* Project object */;
 }
