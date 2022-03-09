@@ -24,7 +24,7 @@ class ApiService: NSObject {
         }
     }
     
-    func getAllImages(url: URL, success: @escaping (ImageCodable) -> Void, faliure: @escaping (String) -> Void) {
+    func getAllImages(url: URL, success: @escaping (ImageHits) -> Void, faliure: @escaping (String) -> Void) {
         ApiService.shareInstance.decodableAPI(url: url, success: success, faliure: faliure)
     }
 }

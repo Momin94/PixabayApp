@@ -14,15 +14,16 @@ class ViewModel {
     weak var movieViewController: ViewController?
 
     // MARK: - Methods
-    func getImage(callback: @escaping ([ImageCodable]) -> Void) {
+    func getImage(callback: @escaping ([ImageHits]) -> Void) {
         guard let url = URL(string: "\(Constants.shareInstance.getBaseAPI())\(Constants.shareInstance.getAPIKey())\(Constants.shareInstance.getAPIParams())") else {
             return
         }
         
         ApiService.shareInstance.getAllImages(url: url) { response in
-            if let images = response.results {
+            let images = response.images
+            
                 self.picturesArray.append(contentsOf: images)
-            }
+            
             callback(self.picturesArray)
         } faliure: { errorMessage in
             print(errorMessage)
