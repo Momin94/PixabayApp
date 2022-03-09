@@ -10,11 +10,11 @@ import UIKit.UIImage
 
 class ViewModel {
     // MARK: - Properties
-    private var picturesArray = [ImageHits]()
+    private var picturesArray = [ImageCodable]()
     weak var movieViewController: ViewController?
 
     // MARK: - Methods
-    func getImage(callback: @escaping ([ImageHits]) -> Void) {
+    func getImage(callback: @escaping ([ImageCodable]) -> Void) {
         guard let url = URL(string: "\(Constants.shareInstance.getBaseAPI())\(Constants.shareInstance.getAPIKey())\(Constants.shareInstance.getAPIParams())") else {
             return
         }
@@ -33,7 +33,7 @@ class ViewModel {
         return picturesArray.count
     }
     
-    func movieAt(index: Int) -> ImageHits {
+    func movieAt(index: Int) -> ImageCodable {
         return picturesArray[index]
     }
 }

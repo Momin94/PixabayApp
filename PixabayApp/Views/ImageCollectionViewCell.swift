@@ -9,8 +9,8 @@ import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var movieTitle: UILabel!
-    @IBOutlet var movieImage: UIImageView!
+    @IBOutlet var title: UILabel!
+    @IBOutlet var image: UIImageView!
 
         
         

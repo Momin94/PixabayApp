@@ -28,7 +28,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
                                  bundle: nil),
                            forCellWithReuseIdentifier: Constants.shareInstance.getCellName())
 
-        imageViewModel.getMovie { _ in
+        imageViewModel.getImage { _ in
             DispatchQueue.main.async {
                 self.movieView.reloadData()
             }
@@ -59,10 +59,10 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
         cell.backgroundColor = .black
         if indexPath.row <= imageViewModel.getCount() {
-            let modelMovie = imageViewModel.movieAt(index: indexPath.row)
-            cell.movieTitle.text = modelMovie.title
-            let imageURL = URL(string: "\(Constants.shareInstance.getBaseImageUrl())" + (modelMovie.poster_path ?? ""))
-            cell.movieImage.sd_setImage(with: imageURL)
+            let modelImage = imageViewModel.movieAt(index: indexPath.row)
+            cell.title.text = "\(modelImage.id)"
+            let imageURL = URL(string: modelImage.previewURL )
+            cell.image.sd_setImage(with: imageURL)
         }
         // Configure the cell
         return cell
@@ -108,8 +108,8 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
 
         if indexPath.row <= imageViewModel.getCount() {
-            let movieModel = imageViewModel.movieAt(index: indexPath.row)
-            destinationController.movieModel = movieModel
+            let model = imageViewModel.movieAt(index: indexPath.row)
+            destinationController.imageModel = model
             navigationController?.show(destinationController, sender: self)
         }
     }
