@@ -11,7 +11,7 @@ import UIKit.UIImage
 class ViewModel {
     // MARK: - Properties
     private var picturesArray = [ImageCodable]()
-    weak var movieViewController: ViewController?
+    weak var imageViewController: ViewController?
 
     // MARK: - Methods
     func getImage(callback: @escaping ([ImageCodable]) -> Void) {
@@ -34,7 +34,7 @@ class ViewModel {
         return picturesArray.count
     }
     
-    func movieAt(index: Int) -> ImageCodable {
+    func imageAt(index: Int) -> ImageCodable {
         return picturesArray[index]
     }
 }

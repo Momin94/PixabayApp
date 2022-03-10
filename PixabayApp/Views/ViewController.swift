@@ -60,7 +60,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
         cell.backgroundColor = .black
         if indexPath.row <= imageViewModel.getCount() {
-            let modelImage = imageViewModel.movieAt(index: indexPath.row)
+            let modelImage = imageViewModel.imageAt(index: indexPath.row)
             cell.title.text = "\(modelImage.id)"
             let imageURL = URL(string: modelImage.previewURL )
             cell.image.sd_setImage(with: imageURL)
@@ -109,7 +109,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
 
         if indexPath.row <= imageViewModel.getCount() {
-            let model = imageViewModel.movieAt(index: indexPath.row)
+            let model = imageViewModel.imageAt(index: indexPath.row)
             destinationController.imageModel = model
             navigationController?.show(destinationController, sender: self)
         }

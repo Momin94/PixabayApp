@@ -7,15 +7,15 @@
 
 import UIKit
 
-protocol MovieLayoutDelegate: AnyObject {
+protocol ImageLayoutDelegate: AnyObject {
     func collectionView(
         _ collectionView: UICollectionView,
         heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat
 }
 
-class MovieLayout: UICollectionViewLayout {
+class ImageLayout: UICollectionViewLayout {
     // 1
-    weak var delegate: MovieLayoutDelegate?
+    weak var delegate: ImageLayoutDelegate?
 
     // 2
     private let numberOfColumns = 1
