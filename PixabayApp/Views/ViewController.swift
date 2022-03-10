@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet var movieView: UICollectionView!
+    @IBOutlet weak var vieww: UICollectionView!
+   
     
     var imageViewModel = ViewModel()
     
@@ -24,13 +25,13 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        movieView.register(UINib(nibName: Constants.shareInstance.getCellName(),
+        vieww.register(UINib(nibName: Constants.shareInstance.getCellName(),
                                  bundle: nil),
                            forCellWithReuseIdentifier: Constants.shareInstance.getCellName())
 
         imageViewModel.getImage { _ in
             DispatchQueue.main.async {
-                self.movieView.reloadData()
+                self.vieww.reloadData()
             }
         }
     }

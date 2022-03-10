@@ -14,7 +14,7 @@ class ViewModel {
     weak var movieViewController: ViewController?
 
     // MARK: - Methods
-    func getImage(callback: @escaping ([ImageHits]) -> Void) {
+    func getImage(callback: @escaping ([ImageCodable]) -> Void) {
         guard let url = URL(string: "\(Constants.shareInstance.getBaseAPI())\(Constants.shareInstance.getAPIKey())\(Constants.shareInstance.getAPIParams())") else {
             return
         }
