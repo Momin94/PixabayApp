@@ -49,10 +49,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
 
     // 3
-    override func collectionView(
-        _ collectionView: UICollectionView,
-        cellForItemAt indexPath: IndexPath
-    ) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView,cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: Constants.shareInstance.getCellName(),
             for: indexPath) as? ImageCollectionViewCell else {
@@ -75,8 +72,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        // work out the total amount of space taken up by padding. You’ll have n + 1 evenly sized spaces, where n is the number of items in the row. You can take the space size from the left section inset.
-        //  Subtracting that from the view’s width and dividing by the number of items in a row gives you the width for each item. You then return the size as a square.
+        
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
@@ -84,16 +80,10 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
 
-    // collectionView(_:layout:insetForSectionAt:) returns the spacing between the cells, headers and footers. A constant stores the value.
-    func collectionView(
-        _ collectionView: UICollectionView,
-        layout collectionViewLayout: UICollectionViewLayout,
-        insetForSectionAt section: Int
-    ) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,insetForSectionAt section: Int) -> UIEdgeInsets {
         return sectionInsets
     }
 
-    // This method controls the spacing between each line in the layout. You want this spacing to match the padding at the left and right.
     func collectionView(
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
@@ -103,10 +93,8 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let destinationController = storyboard.instantiateViewController(withIdentifier: "imagedetail") as? ImageDetailsViewController else {
-            return
-        }
+        
+         let destinationController = ImageDetailsViewController(nibName: "ImageDetailsViewController", bundle: nil) 
 
         if indexPath.row <= imageViewModel.getCount() {
             let model = imageViewModel.imageAt(index: indexPath.row)
