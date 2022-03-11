@@ -9,7 +9,7 @@ import Alamofire
 import UIKit.UIImage
 
 class ViewModel {
-    // MARK: - Properties
+    // MARK: - Properties 
     private var picturesArray = [ImageCodable]()
     weak var imageViewController: ViewController?
 
